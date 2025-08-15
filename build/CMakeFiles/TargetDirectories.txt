@@ -1,0 +1,3 @@
+/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/CMakeFiles/VulkanPhysicsSim.dir
+/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/CMakeFiles/edit_cache.dir
+/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/CMakeFiles/rebuild_cache.dir

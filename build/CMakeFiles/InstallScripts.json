@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
