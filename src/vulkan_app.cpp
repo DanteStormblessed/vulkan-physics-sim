@@ -28,6 +28,13 @@ void VulkanApp::initialize() {
     // Initialize GLFW and create a window
     std::cout << "Creating window..." << std::endl;
     createWindow();
+
+    glfwSetWindowUserPointer(window, this);
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwSetCursorPosCallback(window, [](GLFWwindow* w, double xpos, double ypos) {
+        auto* app = reinterpret_cast<VulkanApp*>(glfwGetWindowUserPointer(w));
+        if (app) app->onMouseMove(xpos, ypos);
+    });
     
     // Initialize Vulkan
     std::cout << "Creating Vulkan instance..." << std::endl;
@@ -59,8 +66,14 @@ void VulkanApp::initialize() {
 
 void VulkanApp::run() {
     // Main rendering loop
+    auto last = std::chrono::high_resolution_clock::now();
     while (!glfwWindowShouldClose(window)) {
+        auto now = std::chrono::high_resolution_clock::now();
+        float dt = std::chrono::duration<float>(now - last).count();
+        last = now;
+
         glfwPollEvents();
+        processInput(dt);
         drawFrame();
     }
 
@@ -469,10 +482,10 @@ void VulkanApp::createGraphicsPipeline() {
               << std::filesystem::current_path().string() + "/shaders/vert.spv" << std::endl;
     
     try {
-        auto vertShaderCode = readFile("shaders/shader.vert.spv");
+        auto vertShaderCode = readFile("shaders/vert.spv");
         std::cout << "Vertex shader loaded successfully: " << vertShaderCode.size() << " bytes" << std::endl;
-        
-        auto fragShaderCode = readFile("shaders/shader.frag.spv");
+
+        auto fragShaderCode = readFile("shaders/frag.spv");
         std::cout << "Fragment shader loaded successfully: " << fragShaderCode.size() << " bytes" << std::endl;
 
         VkShaderModule vertShaderModule = createShaderModule(vertShaderCode, device);
@@ -805,38 +818,73 @@ void VulkanApp::createUniformBuffers() {
 
 void VulkanApp::updateUniformBuffer() {
     static auto startTime = std::chrono::high_resolution_clock::now();
-    
+
     auto currentTime = std::chrono::high_resolution_clock::now();
-    float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
-    
+    float time = std::chrono::duration<float>(currentTime - startTime).count();
+
     UniformBufferObject ubo{};
-    
-    // Rotation of model around the Y axis
+    // Modelo rotando
     ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-    
-    // Position the camera 3 units away looking at the origin
+
+    // Vista desde la cámara
     ubo.view = glm::lookAt(
-        glm::vec3(0.0f, 0.0f, 3.0f),  // Camera position
-        glm::vec3(0.0f, 0.0f, 0.0f),  // Point it looks at
-        glm::vec3(0.0f, 1.0f, 0.0f)   // Up vector
+        cameraPos,
+        cameraPos + cameraFront,
+        cameraUp
     );
 
-    // Perspective projection with a FOV of 45 degrees
-    ubo.proj = glm::perspective(
-        glm::radians(45.0f),           // FOV vertical
-        swapChainExtent.width / (float) swapChainExtent.height,  // Aspect ratio
-        0.1f,                          // Near plane
-        10.0f                          // Far plane
-    );
+    // Proyección con FOV ajustable (GLM_FORCE_DEPTH_ZERO_TO_ONE ya definido)
+    float aspect = swapChainExtent.width / (float) swapChainExtent.height;
+    ubo.proj = glm::perspective(glm::radians(fov), aspect, 0.1f, 100.0f);
+    ubo.proj[1][1] *= -1; // Y invertida en Vulkan
 
-    // In Vulkan, the Y axis is inverted compared to OpenGL
-    ubo.proj[1][1] *= -1;
-
-    // Map memory and copy data
     void* data;
     vkMapMemory(device, uniformBufferMemory, 0, sizeof(ubo), 0, &data);
     memcpy(data, &ubo, sizeof(ubo));
     vkUnmapMemory(device, uniformBufferMemory);
+}
+
+// Movimiento con teclado (WASD + QE)
+void VulkanApp::processInput(float deltaTime) {
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, GLFW_TRUE);
+
+    float velocity = moveSpeed * deltaTime;
+    glm::vec3 right = glm::normalize(glm::cross(cameraFront, cameraUp));
+
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) cameraPos += cameraFront * velocity;
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) cameraPos -= cameraFront * velocity;
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) cameraPos -= right * velocity;
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) cameraPos += right * velocity;
+    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) cameraPos -= cameraUp * velocity;
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS) cameraPos += cameraUp * velocity;
+}
+
+void VulkanApp::onMouseMove(double xpos, double ypos) {
+    if (firstMouse) {
+        lastX = (float)xpos;
+        lastY = (float)ypos;
+        firstMouse = false;
+    }
+
+    float xoffset = (float)xpos - lastX;
+    float yoffset = lastY - (float)ypos; // invertido
+    lastX = (float)xpos;
+    lastY = (float)ypos;
+
+    xoffset *= mouseSensitivity;
+    yoffset *= mouseSensitivity;
+
+    yaw   += xoffset;
+    pitch += yoffset;
+
+    pitch = std::clamp(pitch, -89.0f, 89.0f);
+
+    glm::vec3 front;
+    front.x = cosf(glm::radians(yaw)) * cosf(glm::radians(pitch));
+    front.y = sinf(glm::radians(pitch));
+    front.z = sinf(glm::radians(yaw)) * cosf(glm::radians(pitch));
+    cameraFront = glm::normalize(front);
 }
 
 void VulkanApp::createDescriptorSetLayout() {

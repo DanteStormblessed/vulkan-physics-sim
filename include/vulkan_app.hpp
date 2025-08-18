@@ -1,6 +1,10 @@
 #ifndef VULKAN_APP_HPP
 #define VULKAN_APP_HPP
 
+// Fuerza convención de Vulkan y radianes antes de incluir glm
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+
 #include <vulkan/vulkan.h>
 #include <GLFW/glfw3.h>
 #include <vector>
@@ -35,6 +39,20 @@ private:
     void createDescriptorPool();
     void createDescriptorSets();
     void updateUniformBuffer();
+
+    // Camera state and input
+    void processInput(float deltaTime);
+    void onMouseMove(double xpos, double ypos);
+    bool firstMouse = true;
+    float lastX = 0.0f, lastY = 0.0f;
+    glm::vec3 cameraPos{0.0f, 0.0f, 3.0f};
+    glm::vec3 cameraFront{0.0f, 0.0f, -1.0f};
+    glm::vec3 cameraUp{0.0f, 1.0f, 0.0f};
+    float yaw = -90.0f;   // mirando hacia -Z
+    float pitch = 0.0f;
+    float fov = 45.0f;
+    float moveSpeed = 3.0f;       // unidades/seg
+    float mouseSensitivity = 0.1f;
 
     // Structure for uniform data (transformation matrices)
     struct UniformBufferObject {
