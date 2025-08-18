@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/main.cpp" "CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.o" "gcc" "CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.o.d"
+  "/home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/sphere_model.cpp" "CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o" "gcc" "CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o.d"
   "/home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/vulkan_app.cpp" "CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o" "gcc" "CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o.d"
   "" "VulkanPhysicsSim" "gcc" "CMakeFiles/VulkanPhysicsSim.dir/link.d"
   )

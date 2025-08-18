@@ -243,10 +243,10 @@ VulkanPhysicsSim_IS_TOP_LEVEL:STATIC=ON
 VulkanPhysicsSim_SOURCE_DIR:STATIC=/home/kaladin/Proyect/Simulation/vulkan-physics-sim
 
 //Path to a program.
-Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-NOTFOUND
+Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=/bin/glslangValidator
 
 //Path to a program.
-Vulkan_GLSLC_EXECUTABLE:FILEPATH=Vulkan_GLSLC_EXECUTABLE-NOTFOUND
+Vulkan_GLSLC_EXECUTABLE:FILEPATH=/bin/glslc
 
 //Path to a file.
 Vulkan_INCLUDE_DIR:PATH=/usr/include
@@ -415,7 +415,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Vulkan
-FIND_PACKAGE_MESSAGE_DETAILS_Vulkan:INTERNAL=[/usr/lib/x86_64-linux-gnu/libvulkan.so][/usr/include][ missing components: glslc glslangValidator][v1.3.275()]
+FIND_PACKAGE_MESSAGE_DETAILS_Vulkan:INTERNAL=[/usr/lib/x86_64-linux-gnu/libvulkan.so][/usr/include][found components: glslc glslangValidator ][v1.3.275()]
 //ADVANCED property for variable: Vulkan_GLSLANG_VALIDATOR_EXECUTABLE
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_GLSLC_EXECUTABLE

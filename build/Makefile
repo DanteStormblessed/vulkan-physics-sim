@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named shaders
+
+# Build rule for target.
+shaders: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shaders
+.PHONY : shaders
+
+# fast build rule for target.
+shaders/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shaders.dir/build.make CMakeFiles/shaders.dir/build
+.PHONY : shaders/fast
+
+#=============================================================================
 # Target rules for targets named VulkanPhysicsSim
 
 # Build rule for target.
@@ -153,6 +166,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPhysicsSim.dir/build.make CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/sphere_model.o: src/sphere_model.cpp.o
+.PHONY : src/sphere_model.o
+
+# target to build an object file
+src/sphere_model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPhysicsSim.dir/build.make CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o
+.PHONY : src/sphere_model.cpp.o
+
+src/sphere_model.i: src/sphere_model.cpp.i
+.PHONY : src/sphere_model.i
+
+# target to preprocess a source file
+src/sphere_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPhysicsSim.dir/build.make CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.i
+.PHONY : src/sphere_model.cpp.i
+
+src/sphere_model.s: src/sphere_model.cpp.s
+.PHONY : src/sphere_model.s
+
+# target to generate assembly for a file
+src/sphere_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPhysicsSim.dir/build.make CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.s
+.PHONY : src/sphere_model.cpp.s
+
 src/vulkan_app.o: src/vulkan_app.cpp.o
 .PHONY : src/vulkan_app.o
 
@@ -185,10 +222,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... shaders"
 	@echo "... VulkanPhysicsSim"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sphere_model.o"
+	@echo "... src/sphere_model.i"
+	@echo "... src/sphere_model.s"
 	@echo "... src/vulkan_app.o"
 	@echo "... src/vulkan_app.i"
 	@echo "... src/vulkan_app.s"

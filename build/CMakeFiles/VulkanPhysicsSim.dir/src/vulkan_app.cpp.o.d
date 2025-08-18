@@ -74,7 +74,6 @@ CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/kaladin/Proyect/Simulation/vulkan-physics-sim/include/planet.hpp \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -251,8 +250,11 @@ CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o: \
  /usr/include/glm/packing.hpp /usr/include/glm/detail/func_packing.inl \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
- /usr/include/glm/detail/func_integer.inl /usr/include/c++/13/stdexcept \
- /usr/include/c++/13/exception /usr/include/c++/13/bits/exception_ptr.h \
+ /usr/include/glm/detail/func_integer.inl \
+ /home/kaladin/Proyect/Simulation/vulkan-physics-sim/include/sphere_model.hpp \
+ /usr/include/c++/13/array /usr/include/c++/13/compare \
+ /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
+ /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
  /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/stringfwd.h \
@@ -335,4 +337,34 @@ CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o: \
  /usr/include/c++/13/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc
+ /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/chrono \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
+ /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/iomanip \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/sstream \
+ /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/codecvt \
+ /usr/include/c++/13/ext/concurrence.h \
+ /usr/include/c++/13/bits/shared_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr_base.h \
+ /usr/include/c++/13/bits/allocated_ptr.h \
+ /usr/include/c++/13/bits/unique_ptr.h /usr/include/c++/13/bits/fs_dir.h \
+ /usr/include/c++/13/bits/fs_ops.h \
+ /usr/include/glm/gtc/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_projection.hpp \
+ /usr/include/glm/gtc/constants.hpp \
+ /usr/include/glm/ext/scalar_constants.hpp \
+ /usr/include/glm/ext/scalar_constants.inl \
+ /usr/include/glm/gtc/constants.inl \
+ /usr/include/glm/ext/matrix_projection.inl \
+ /usr/include/glm/ext/matrix_clip_space.hpp \
+ /usr/include/glm/ext/matrix_clip_space.inl \
+ /usr/include/glm/ext/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_transform.inl \
+ /usr/include/glm/gtc/matrix_transform.inl /usr/include/c++/13/cstring \
+ /usr/include/string.h /usr/include/strings.h

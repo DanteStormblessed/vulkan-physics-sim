@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VulkanPhysicsSim.dir/link.d"
   "CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.o"
   "CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.o.d"
+  "CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o"
+  "CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o.d"
   "CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o"
   "CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o.d"
   "VulkanPhysicsSim"

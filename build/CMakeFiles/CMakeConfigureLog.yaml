@@ -2110,3 +2110,161 @@ events:
         - "/usr/pkg"
         - "/opt"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindVulkan.cmake:410 (find_program)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "program"
+    variable: "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glslangValidator"
+    candidate_directories:
+      - "/bin/"
+      - "/home/kaladin/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/kaladin/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/snap/cmake/1479/bin/"
+      - "/snap/cmake/1479/sbin/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    found: "/bin/glslangValidator"
+    search_context:
+      ENV{PATH}:
+        - "/home/kaladin/bin"
+        - "/home/kaladin/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/kaladin/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/snap/cmake/1479/share/cmake-4.1/Modules/FindVulkan.cmake:402 (find_program)"
+      - "CMakeLists.txt:8 (find_package)"
+    mode: "program"
+    variable: "Vulkan_GLSLC_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glslc"
+    candidate_directories:
+      - "/bin/"
+      - "/home/kaladin/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/kaladin/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/snap/cmake/1479/bin/"
+      - "/snap/cmake/1479/sbin/"
+      - "/snap/cmake/1479/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    found: "/bin/glslc"
+    search_context:
+      ENV{PATH}:
+        - "/home/kaladin/bin"
+        - "/home/kaladin/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/kaladin/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/snap/cmake/1479"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...

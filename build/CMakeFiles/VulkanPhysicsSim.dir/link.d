@@ -3,6 +3,7 @@ VulkanPhysicsSim: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
   CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.o \
+  CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o \
   CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o \
   /usr/lib/x86_64-linux-gnu/libvulkan.so \
   /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 \
@@ -32,7 +33,6 @@ VulkanPhysicsSim: \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o \
-  /lib/x86_64-linux-gnu/libm.so.6 \
   /lib/x86_64-linux-gnu/libX11.so.6 \
   /lib64/ld-linux-x86-64.so.2 \
   /lib/x86_64-linux-gnu/libxcb.so.1 \
@@ -48,6 +48,8 @@ VulkanPhysicsSim: \
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
 CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.o:
+
+CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o:
 
 CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o:
 
@@ -106,8 +108,6 @@ CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o:
 /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o:
-
-/lib/x86_64-linux-gnu/libm.so.6:
 
 /lib/x86_64-linux-gnu/libX11.so.6:
 

@@ -86,10 +86,24 @@ CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/main.cpp -o CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.s
 
+CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o: CMakeFiles/VulkanPhysicsSim.dir/flags.make
+CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o: /home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/sphere_model.cpp
+CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o: CMakeFiles/VulkanPhysicsSim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o -MF CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o.d -o CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o -c /home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/sphere_model.cpp
+
+CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/sphere_model.cpp > CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.i
+
+CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/sphere_model.cpp -o CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.s
+
 CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o: CMakeFiles/VulkanPhysicsSim.dir/flags.make
 CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o: /home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/vulkan_app.cpp
 CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o: CMakeFiles/VulkanPhysicsSim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o -MF CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o.d -o CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o -c /home/kaladin/Proyect/Simulation/vulkan-physics-sim/src/vulkan_app.cpp
 
 CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.i: cmake_force
@@ -103,20 +117,23 @@ CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.s: cmake_force
 # Object files for target VulkanPhysicsSim
 VulkanPhysicsSim_OBJECTS = \
 "CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.o" \
+"CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o" \
 "CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o"
 
 # External object files for target VulkanPhysicsSim
 VulkanPhysicsSim_EXTERNAL_OBJECTS =
 
 VulkanPhysicsSim: CMakeFiles/VulkanPhysicsSim.dir/src/main.cpp.o
+VulkanPhysicsSim: CMakeFiles/VulkanPhysicsSim.dir/src/sphere_model.cpp.o
 VulkanPhysicsSim: CMakeFiles/VulkanPhysicsSim.dir/src/vulkan_app.cpp.o
 VulkanPhysicsSim: CMakeFiles/VulkanPhysicsSim.dir/build.make
 VulkanPhysicsSim: CMakeFiles/VulkanPhysicsSim.dir/compiler_depend.ts
 VulkanPhysicsSim: /usr/lib/x86_64-linux-gnu/libvulkan.so
 VulkanPhysicsSim: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 VulkanPhysicsSim: CMakeFiles/VulkanPhysicsSim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable VulkanPhysicsSim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable VulkanPhysicsSim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VulkanPhysicsSim.dir/link.txt --verbose=$(VERBOSE)
+	/snap/cmake/1479/bin/cmake -E copy_directory /home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/shaders /home/kaladin/Proyect/Simulation/vulkan-physics-sim/build/shaders
 
 # Rule to build all files generated by this target.
 CMakeFiles/VulkanPhysicsSim.dir/build: VulkanPhysicsSim
